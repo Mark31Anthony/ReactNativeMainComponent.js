@@ -59,6 +59,7 @@ function RenderCampsite(props) {
             else if (recognizeComment(gestureState)) {
                 props.onShowModal();
             }
+            return true;
         }
     });
 
@@ -125,7 +126,7 @@ function RenderComments({comments}) {
                 <FlatList
                     data={comments}
                     renderItem={renderCommentItem}
-                    keyExtractor={item => item.id.toString()}a
+                    keyExtractor={item => item.id.toString()}
                 />
             </Card>
         </Animatable.View>
